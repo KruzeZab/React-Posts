@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-import { links } from '../../data/Links';
+import { navbarLinks, navbarButtons } from '../../data/Links';
 
 import logo from '../../images/logo192.png';
 import SearchInput from './SearchInput';
@@ -10,18 +10,14 @@ const Header = () => {
   // Show Login and signup buttons
   const renderAuthButtons = (
     <>
-      <div className="item">
-        <Link to="/auth/login" className="ui basic button">
-          <i className="icon user" />
-          Log In
-        </Link>
-      </div>
-      <div className="item">
-        <Link to="/auth/register" className="ui primary button">
-          <i className="icon user plus" />
-          Sign Up
-        </Link>
-      </div>
+      {navbarButtons.map(({ path, text, className, icon }) => (
+        <div className="item" key={path}>
+          <Link to={path} className={className}>
+            <i className={`icon ${icon}`} />
+            {text}
+          </Link>
+        </div>
+      ))}
     </>
   );
 
@@ -40,9 +36,9 @@ const Header = () => {
         {/* Logo Ends */}
 
         {/* Nav Links */}
-        {links.map(({ path, text, className }) => {
+        {navbarLinks.map(({ path, text, className }) => {
           return (
-            <NavLink key={path} to={path} className={className}>
+            <NavLink key={path} to={path} className={className} exact>
               {text}
             </NavLink>
           );
