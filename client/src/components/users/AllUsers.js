@@ -1,15 +1,18 @@
 import React from 'react';
+import SingleListUser from './SingleListUser';
 
-import SingleListPost from './SingleListPost';
-
-const ListPosts = () => {
+const AllUsers = () => {
   return (
     <>
       <h3 className="ui header dividing">
-        <i className="icon newspaper outline" />
-        All Posts
+        <i className="icon users" />
+        All Users
       </h3>
-      <SingleListPost />
+      <div className="ui middle aligned selection list divided">
+        <SingleListUser />
+        <SingleListUser />
+        <SingleListUser />
+      </div>
 
       {/*
       <div className="ui placeholder ">
@@ -22,4 +25,4 @@ const ListPosts = () => {
   );
 };
 
-export default ListPosts;
+export default AllUsers;

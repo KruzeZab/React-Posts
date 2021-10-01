@@ -5,15 +5,16 @@ import './Input.css';
 const TextArea = ({ label, ...props }) => {
   const [field, meta] = useField(props);
 
+  const checkError = meta.touched && meta.error;
+  const className = `field ${checkError ? 'error' : ''}`;
+
   return (
-    <>
+    <div className={className}>
       <label htmlFor={props.id}>{label}</label>
 
       <Field {...field} {...props} as="textarea" />
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
-    </>
+      {checkError ? <div className="error">{meta.error}</div> : null}
+    </div>
   );
 };
 

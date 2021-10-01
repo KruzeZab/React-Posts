@@ -6,7 +6,12 @@ export const navbarLinks = [
   },
   {
     path: '/posts/new',
-    text: 'New post',
+    text: 'New Post',
+    className: 'item',
+  },
+  {
+    path: '/users/all',
+    text: 'View All Users',
     className: 'item',
   },
 ];
