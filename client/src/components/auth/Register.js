@@ -4,7 +4,7 @@ import RegisterForm from '../forms/RegisterForm';
 const Login = () => {
   return (
     <div>
-      <h3 class="ui header dividing">
+      <h3 className="ui header dividing">
         <i className="icon user plus" />
         User Register
       </h3>

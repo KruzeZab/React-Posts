@@ -4,8 +4,8 @@ import PostForm from '../forms/PostForm';
 const AddPost = () => {
   return (
     <div>
-      <h3 class="ui header dividing">
-        <i class="pencil alternate icon" />
+      <h3 className="ui header dividing">
+        <i className="pencil alternate icon" />
         Create Post
       </h3>
 

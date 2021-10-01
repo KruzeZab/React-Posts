@@ -4,7 +4,7 @@ import LoginForm from '../forms/LoginForm';
 const Login = () => {
   return (
     <div>
-      <h3 class="ui header dividing">
+      <h3 className="ui header dividing">
         <i className="icon user" />
         User Login
       </h3>
